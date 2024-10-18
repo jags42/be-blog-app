@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Blog</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <h1>My Blog</h1>
+    <%= link_to 'Home', root_path %>
+  </header>
+
+  <div class="content">
+    <%= yield %> <!-- This is where the individual view content will be inserted -->
+  </div>
+
+  <footer>
+    <p>&copy; 2024 My Blog</p>
+  </footer>
+</body>
+</html>
